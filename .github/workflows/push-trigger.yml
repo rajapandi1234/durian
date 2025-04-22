@@ -58,7 +58,7 @@ jobs:
             SERVICE_NAME: 'data-share-service'
             BUILD_ARTIFACT: 'data-share'
             # SQUASH_LAYERS: '11'
-            # PLATFORMS: "linux/arm64,linux/amd64"
+            PLATFORMS: "linux/arm64"
       fail-fast: false
     name: ${{ matrix.SERVICE_NAME }}
     uses: bhumi46/kattu/.github/workflows/docker-build.yml@master-java21
