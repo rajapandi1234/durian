@@ -10,6 +10,23 @@ LABEL commit_id=${COMMIT_ID}
 LABEL build_time=${BUILD_TIME}
 
 # can be passed during Docker build as build time environment for github branch to pickup configuration from.
+ARG container_user=mosip
+
+# can be passed during Docker build as build time environment for github branch to pickup configuration from.
+ARG container_user_group=mosip
+
+# can be passed during Docker build as build time environment for github branch to pickup configuration from.
+ARG container_user_uid=1001
+
+# can be passed during Docker build as build time environment for github branch to pickup configuration from.
+ARG container_user_gid=1001
+
+ENV container_user=${container_user}
+ENV container_user_group=${container_user_group}
+ENV container_user_uid=${container_user_uid}
+ENV container_user_gid=${container_user_gid}
+
+# can be passed during Docker build as build time environment for github branch to pickup configuration from.
 ARG spring_config_label
 
 # can be passed during Docker build as build time environment for spring profiles active
@@ -40,23 +57,6 @@ ENV is_glowroot_env=${is_glowroot}
 ENV artifactory_url_env=${artifactory_url}
 # environment variable to pass iam_adapter url, at docker runtime
 ENV iam_adapter_url_env=${iam_adapter_url}
-
-# can be passed during Docker build as build time environment for github branch to pickup configuration from.
-ARG container_user=mosip
-
-# can be passed during Docker build as build time environment for github branch to pickup configuration from.
-ARG container_user_group=mosip
-
-# can be passed during Docker build as build time environment for github branch to pickup configuration from.
-ARG container_user_uid=1001
-
-# can be passed during Docker build as build time environment for github branch to pickup configuration from.
-ARG container_user_gid=1001
-
-ENV container_user=${container_user}
-ENV container_user_group=${container_user_group}
-ENV container_user_uid=${container_user_uid}
-ENV container_user_gid=${container_user_gid}
 
 # install packages and create user
 RUN apk -q update \
