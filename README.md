@@ -26,4 +26,3 @@ Standalone mode enablement is not advisable as part of MOSIP identity platform d
 
 ## License
 This project is licensed under the terms of [Mozilla Public License 2.0](LICENSE)
-
