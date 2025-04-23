@@ -21,8 +21,6 @@ To configure the same, below properties should be used:
 3. **mosip.data.share.static-policy.policy-id:** This property contains the policy id which will be used for creating the data share. This property must match with the {policyId} received in the **/create** API otherwise error will be thrown. 
 4. **mosip.data.share.static-policy.subscriber-id:** This property contains the subscriber id which will be used for creating the data share. This property must match with the {subscriberId} received in the **/create** API otherwise error will be thrown.
 5. **mosip.data.share.signature.disabled:** This property enables/disables the signature computation for the created data share. This property value must be **true**.
-
-
 Standalone mode enablement is not advisable as part of MOSIP identity platform deployment because it bypasses the policy verification and signature computation for the created data share. It makes difficult to detect the integrity issue and restricts dynamic policy based data share generation.
 
 ## License
