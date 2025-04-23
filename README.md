@@ -24,6 +24,8 @@ To configure the same, below properties should be used:
 
 Standalone mode enablement is not advisable as part of MOSIP identity platform deployment because it bypasses the policy verification and signature computation for the created data share. It makes difficult to detect the integrity issue and restricts dynamic policy based data share generation.
 
+
+
 ## License
 This project is licensed under the terms of [Mozilla Public License 2.0](LICENSE)
 
