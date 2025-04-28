@@ -61,7 +61,7 @@ jobs:
             PLATFORMS: "linux/amd64"
       fail-fast: false
     name: ${{ matrix.SERVICE_NAME }}
-    uses: bhuminathanorg/kattu/.github/workflows/docker-build.yml@documentation
+    uses: bhuminathanorg/kattu/.github/workflows/docker-build.yml@develop
     with:
       SERVICE_LOCATION: ${{ matrix.SERVICE_LOCATION }}
       SERVICE_NAME: ${{ matrix.SERVICE_NAME }}
