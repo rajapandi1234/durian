@@ -14,7 +14,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<springdoc.version>1.5.10</springdoc.version>
+		<springdoc.version>1.7.0</springdoc.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
