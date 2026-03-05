@@ -3,7 +3,7 @@ name: License Compliance Check
 on:
   pull_request:
     paths:
-      - '**/pom.xml'
+      - 'pom.xml'
 
 jobs:
   license-check:
