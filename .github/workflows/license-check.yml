@@ -1,0 +1,35 @@
+name: License Compliance Check
+
+on:
+  pull_request:
+    paths:
+      - '**/pom.xml'
+
+jobs:
+  license-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Generate dependency list
+        run: |
+          mvn -q dependency:list -DincludeScope=runtime -DoutputFile=deps.txt
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: pip install requests
+
+      - name: Run license compliance check
+        run: python check_licenses.py
