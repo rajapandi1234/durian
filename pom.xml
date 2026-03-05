@@ -9,7 +9,7 @@
 
     <name>MOSIP Durian Parent POM</name>
     <description>Mosip Durian Project</description>
-    <url>https://github.com/mosip/durian</url>
+    <url>https://github.com/mosip/durian</url>hh
 
     <licenses>
         <license>
@@ -148,3 +148,4 @@
         <module>data-share</module>
     </modules>
 </project>
+
